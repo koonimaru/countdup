@@ -1,15 +1,15 @@
-# view_columns
+# countdup
 
-## What is view_columns
+## What is countdup
 
-view_columns is a python script to view files containing a lot of columns on the terminal
+countdup is a python script to count duplicated elements in a column of a input file
 
 ## Install
 
-git clone https://github.com/koonimaru/view_columns.git <br>
-cd view_columns <br>
+git clone https://github.com/koonimaru/countdup.git <br>
+cd countdup <br>
 pip install .
 
 ## Example usage
 On your terminal window, type
-view_columns <input file>
+countdup -c 0 <input file>

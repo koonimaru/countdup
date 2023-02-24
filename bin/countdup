@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+import sys
+import argparse
+import csv
+import io 
+if __name__=="__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file", help="Input file to count. It can accept stdin",
+                        type=argparse.FileType('r'),nargs='?',
+                        default=sys.stdin)
+    parser.add_argument("-c","--column", help="Elements in the Nth column to count.",type=int)
+    parser.add_argument("-d","--delim", help="The delimitter or separator of the input file.",type=str, default="\t")
+    #parser.add_argument("-p","--partition", help="The delimitter or separator of the output.",type=str, default="::")
+    parser.add_argument("-s","--skip", help="Skipping starts with this character.",type=str, default="#")
+    parser.add_argument("-S","--sort", help="sorting result.", default=False, action='store_true')
+    #parser.add_argument("-p","--print_line", help="print entire lines", default=False, action='store_true')
+    args = parser.parse_args()
+    
+    
+    cnum=args.column
+    sep=args.delim
+    # print(args.file)
+    # print(type(args.file))
+    # print(args.file==io.TextIOWrapper)
+    # print(isinstance(args.file, io.TextIOWrapper))
+    # print(sys.stdin.isatty())
+    if type(args.file)==str:
+        fin=open(args.file)
+    elif sys.stdin.isatty()==False:
+        fin=args.file
+    else:
+        parser.print_help()
+        raise Exception("Unknown input types")
+    toprint={}
+    fin=csv.reader(fin, delimiter=sep)
+    
+    for i, line in enumerate(fin):
+        countchar= line[cnum]
+        if not countchar in toprint:
+            toprint[countchar]=0
+        toprint[countchar]+=1
+    
+    if args.sort==True:
+        _toprint=[]
+        for k, v in toprint.items():
+            _toprint.append([v, k])
+        _toprint=sorted(_toprint)
+        for v, k in reversed(_toprint):
+            print(k, v)
+
+    else:
+        for k, v in toprint.items():
+            print(k, v)

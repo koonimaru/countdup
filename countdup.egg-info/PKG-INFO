@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: countdup
+Version: 0.0.0
+Summary: Counting occurrence of elements in a column
+Home-page: UNKNOWN
+Author: Koh Onimaru
+Author-email: koh.onimaru@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License 
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence

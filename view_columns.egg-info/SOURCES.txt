@@ -1,0 +1,7 @@
+README.md
+setup.py
+bin/view_columns
+view_columns.egg-info/PKG-INFO
+view_columns.egg-info/SOURCES.txt
+view_columns.egg-info/dependency_links.txt
+view_columns.egg-info/top_level.txt

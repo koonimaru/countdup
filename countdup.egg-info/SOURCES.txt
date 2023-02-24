@@ -1,0 +1,7 @@
+README.md
+setup.py
+bin/countdup
+countdup.egg-info/PKG-INFO
+countdup.egg-info/SOURCES.txt
+countdup.egg-info/dependency_links.txt
+countdup.egg-info/top_level.txt

@@ -6,10 +6,11 @@ countdup is a python script to count duplicated elements in a column of a input 
 
 ## Install
 
-git clone https://github.com/koonimaru/countdup.git <br>
-cd countdup <br>
-pip install .
+pip install git+https://github.com/koonimaru/countdup.git
 
 ## Example usage
-On your terminal window, type
+On your terminal window, type <br>
+
+```bash
 countdup -c 0 <input file>
+```
